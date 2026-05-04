@@ -239,6 +239,14 @@ footer p {
 
 @media (max-width: 768px) {
     #home {
-        margin-top: 230px;
+        margin-top: 210px;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 16px;
     }
 }
