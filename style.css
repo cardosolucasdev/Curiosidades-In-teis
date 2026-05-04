@@ -109,14 +109,6 @@ a {
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    #home {
-        padding-top: 170px; /
-    }
-}
-
-
-
 #home p {
     color: #5314CD;
     font-size: 20px;
@@ -239,7 +231,7 @@ footer p {
 
 @media (max-width: 768px) {
     #home {
-        margin-top: 200px;
+        margin-top: 40px;
     }
 }
 
