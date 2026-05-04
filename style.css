@@ -236,3 +236,9 @@ list-style-type: none;
 footer p {
     padding: 1rem;
 }
+
+@media (max-width: 768px) {
+    h1 {
+        margin-top: 300px;
+    }
+}
