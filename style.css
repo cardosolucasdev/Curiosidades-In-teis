@@ -238,7 +238,7 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    h1 {
-        margin-top: 300px;
+    #home {
+        margin-top: 230px;
     }
 }
