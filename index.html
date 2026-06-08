@@ -30,6 +30,7 @@
                     <a class="nav-link" href="#tabela">Tabela</a>
                     <a class="nav-link" href="#video">Vídeo</a>
                     <a class="nav-link" href="#contato">Entre em contato</a>
+                    <button id="btn-tema" aria-label="Ativar modo escuro">🌙</button>
                 </div>
             </div>
         </div>
@@ -156,16 +157,17 @@
     </section>
 
     <section id="contato">
+
         <h2>Entre em Contato</h2>
-        <form>
+        <form id="formContato" novalidate>
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome">
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email">
 
             <label for="sugestões">sugestões:</label>
-            <textarea id="sugestoes" name="sugestoes" required></textarea>
+            <textarea id="sugestoes" name="sugestoes"></textarea>
 
             <h2>Qual curiosidade <br>você achou mais interessante? </h2>
 
@@ -197,6 +199,7 @@
             </div>
 
             <button type="submit">Enviar</button>
+            <div id="mensagem-sucesso">✅ Mensagem enviada com sucesso! Obrigado pelo contato.</div>
         </form>
     </section>
 
@@ -216,6 +219,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <script src="teste.js"></script>
 </body>
 
 </html>
