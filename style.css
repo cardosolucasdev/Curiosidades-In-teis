@@ -251,46 +251,25 @@ footer ul{
     text-align: center;
 }
 
-/* BOTÃO DE TEMA */
- 
-#btn-tema {
-    background: none;
-    border: 1.5px solid currentColor;
-    border-radius: 20px;
-    padding: 4px 14px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    color: inherit;
-}
-#btm-tema :hover {
-    opacity: 0.7;
-}
-
-
-/* MODO ESCURO — variáveis */
+/* MODO ESCURO */
 
 :root {
     --bg: #ffffff;
-    --bg-section: #f8f8f8;
-    --texto: #1a1a1a;
-    --texto-muted: #555;
+    --bg-section: transparent;
+    --texto: #030000;
     --borda: #ddd;
-    --nav-bg: #1a1a1a;
-    --nav-texto: #f0f0f0;
+    --nav-bg: #5314CD;
+    --nav-texto: #fffefe;
 }
 
 [data-theme="dark"] {
     --bg: #121212;
     --bg-section: #1e1e1e;
     --texto: #e8e8e8;
-    --texto-muted: #aaa;
     --borda: #333;
     --nav-bg: #0a0a0a;
     --nav-texto: #e8e8e8;
 }
-
-/* Aplica as variáveis nos elementos principais */
 
 body {
     background-color: var(--bg);
@@ -300,11 +279,20 @@ body {
 
 .navbar {
     background-color: var(--nav-bg) !important;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-brand,
 .nav-link {
     color: var(--nav-texto) !important;
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+    color: #5314CD !important;
 }
 
 section {
@@ -317,52 +305,41 @@ table {
     color: var(--texto);
 }
 
-th, td {
+td, th {
     border-color: var(--borda) !important;
     color: var(--texto);
 }
 
 footer {
-    background-color: var(--nav-bg);
-    color: var(--nav-texto);
+    background-color: #222;
+    color: white;
 }
 
 input, textarea {
     background-color: var(--bg);
     color: var(--texto);
     border-color: var(--borda);
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-/* VALIDAÇÃO DE FORMULÁRIO */
-
-.campo-invalido {
-    border: 2px solid #e74c3c !important;
-    outline: none;
-    border-radius: 4px;
+#btn-tema {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: inherit;
 }
 
-.campo-valido {
-    border: 2px solid #27ae60 !important;
-    border-radius: 4px;
-}
+/* VALIDAÇÃO */
 
-.mensagem-erro {
+.erro {
     display: block;
-    color: #e74c3c;
+    color: red;
     font-size: 0.85rem;
     margin-top: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-.radios-invalido {
-    border: 2px solid #e74c3c;
-    border-radius: 6px;
-    padding: 8px;
-}
-
-/* Mensagem de sucesso após envio */
 #mensagem-sucesso {
     display: none;
     background-color: #d4edda;
@@ -379,5 +356,3 @@ input, textarea {
     color: #7dcea0;
     border-color: #2e6b42;
 }
-
-
